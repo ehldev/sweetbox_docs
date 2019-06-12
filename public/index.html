@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Documentación sweetbox</title><link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto:300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/sweetbox.min.css?t=1560301688323"/>
+    <link rel="stylesheet" href="css/app.css?t=1560301688323"/>
+  </head>
+  <body>
+    <div class="welcome h-75 container-fluid d-flex flex-column justify-content-center align-items-center mt-5">
+      <h1 class="title text-success display-3">Sweetbox</h1>
+      <p class="description lead">Librería javascript para mostrar imágenes en un lightbox, sin dependencia (No Jquery) y totalmente libre.</p>
+      <p><a class="btn btn-success rounded-0 mb-3 mr-3" href="http://localhost:3000/sweetbox.rar" download=""><i class="fas fa-cloud-download-alt"></i> Descargar</a><a class="btn btn-light rounded-0 mb-3" href="https://github.com/codeerick95/sweetbox" target="_blank">
+           <i class="fab fa-github"></i> Github</a></p>
+      <p class="text-dark">Por <a class="text-dark" href="#">Erick Huamani</a></p>
+    </div>
+    <div class="docs container mt-5">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <h2 class="mt-5">Demo</h2><div id="sweetbox-container" class="card-columns text-center">
+<div class="card sweetbox-item">
+<img src="https://images.unsplash.com/photo-1559657153-fdea6cd5ddf7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="card-img-top sweetbox-small-img" alt="Weed">
+<img src="https://images.unsplash.com/photo-1559657153-fdea6cd5ddf7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="card-img-top sweetbox-large-img" alt="Weed">
+          <p class="sweetbox-description-img">Descripción de imagen 1</p></div>
+<div class="card sweetbox-item">
+<img src="https://images.unsplash.com/photo-1559657693-e816ff3bd9af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="card-img-top sweetbox-small-img" alt="Weed">
+<img src="https://images.unsplash.com/photo-1559657693-e816ff3bd9af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="card-img-top sweetbox-large-img" alt="Weed">
+          <p class="sweetbox-description-img">Descripción de imagen 2</p></div>
+<div class="card sweetbox-item">
+<img src="https://images.unsplash.com/photo-1559658550-077da704211b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" class="card-img-top sweetbox-small-img" alt="Weed">
+<img src="https://images.unsplash.com/photo-1559658550-077da704211b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" class="card-img-top sweetbox-large-img" alt="Weed">
+          <p class="sweetbox-description-img">Descripción de imagen 3</p></div>
+<div class="card sweetbox-item">
+<img src="https://images.unsplash.com/photo-1559556627-a3948005f42f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="card-img-top sweetbox-small-img" alt="Weed">
+<img src="https://images.unsplash.com/photo-1559556627-a3948005f42f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="card-img-top sweetbox-large-img" alt="Weed">
+          <p class="sweetbox-description-img">Descripción de imagen 4</p></div>
+</div>
+          <h2 class="subtitle mt-5">Empezando</h2>
+          <p class="description">Agrega los archivos <span class="font-weight-bold">sweetbox.min.css y </span><span class="font-weight-bold">sweetbox.min.js </span><span>a tu proyecto.</span></p>
+          <div class="alert alert-success">
+            <p class="text-dark"><span class="font-weight-bold">sweetbox.min.css </span><span>solo agrega estilos al lightbox, así que puedes utilizar los estilos o el framework que desees para tus imágenes.</span></p>
+          </div>
+          <h2 class="subtitle mt-5">Estructura HTML</h2>
+          <p class="description">Deberás tener un contenedor principal para las imágenes, el cual debe tener un ID
+            <div class="alert alert-light">
+              <p class="text-dark"><span><code>&lt;section id="my_container"&gt;&lt;/section&gt;</code></span></p>
+            </div>
+            <p class="description">Dentro del contenedor, tendrás que crear un nuevo elemento que agrupe las imágenes, debe tener la clase <span class="font-weight-bold">.sweetbox-item</span><br/></p>
+            <p>Dentro de cada item deberás agregar las dos imágenes (No importa el orden) la imagen pequeña tendrá la clase <span class="font-weight-bold">sweetbox-small-img </span><span>y la imagen grande </span><span class="font-weight-bold">sweetbox-large-img </span><br/><span>ésta última será la que se mostrará en el lightbox.
+                <p class="text-dark"><span class="font-weight-bold">Quedaría así</span><br/><span><code>&lt;section id="my_container"&gt;</span><br/><span class="d-inline-block ml-3">&lt;div class="sweetbox-item"&gt;</span><br/><span class="d-inline-block ml-5">&lt;img src="...small-image.png" class="sweetbox-small-img"&gt;</span><br/><span class="d-inline-block ml-5">&lt;img src="...large-image.png" class="sweetbox-large-img"&gt;</span><br/><span class="d-inline-block ml-3">&lt;/div&gt;</span><br/><span class="d-inline-block ml-3">&lt;div class="sweetbox-item"&gt;</span><br/><span class="d-inline-block ml-5">&lt;img src="...small-image.png" class="sweetbox-small-img"&gt;</span><br/><span class="d-inline-block ml-5">&lt;img src="...large-image.png" class="sweetbox-large-img"&gt;</span><br/><span class="d-inline-block ml-3">&lt;/div&gt;</span><br/><span class="d-inline-block ml-3">&lt;div class="sweetbox-item"&gt;</span><br/><span class="d-inline-block ml-5">&lt;img src="...small-image.png" class="sweetbox-small-img"&gt;</span><br/><span class="d-inline-block ml-5">&lt;img src="...large-image.png" class="sweetbox-large-img"&gt;</span><br/><span class="d-inline-block ml-3">&lt;/div&gt;</span><br/>
+                  <p>Todos los items que desees...</p><span>&lt;/section&gt;</code></span>
+                </p></span></p>
+          </p>
+          <h2 class="mt-5">Inicializa la librería</h2>
+          <div class="alert alert-light">
+            <p class="text-dark code p-3"><span>var container = document.getElementById('my_container')</span><br/><span>sweetbox(container)</span></p>
+          </div>
+          <h2 class="mt-5">Opciones</h2>
+          <p class="text-dark">Sweetbox es un proyecto joven (Versión 1.0.0) por lo tanto no tiene muchas opciones disponibles, se agregarán funcionalidades en el futuro.</p>
+          <p class="text-dark font-weight-bold mt-5">Agregar descripción a las imágenes</p>
+          <p class="text-dark"><span class="font-weight-bold">Html</span><br/><span><code></span><span class="d-inline-block ml-3">&lt;div class="sweetbox-item"&gt;</span><br/><span class="d-inline-block ml-4">&lt;img src="...small-image.png" class="sweetbox-small-img"&gt;</span><br/><span class="d-inline-block ml-4">&lt;img src="...large-image.png" class="sweetbox-large-img"&gt;</span><br/><br/><span class="d-inline-block ml-4">&lt;p  class="sweetbox-description-img"&gt;</span><br/><span class="d-inline-block ml-5">Descripción de la imagen</span><br/><span class="d-inline-block ml-4">&lt;/p&gt;</span><br/><span class="d-inline-block ml-3">&lt;/div&gt;</span></code></p>
+          <p class="text-dark code p-3"> <span class="font-weight-bold d-inline-block mb-3">Javascript</span><br/><span>var container = document.getElementById('my_container')</span><br/><br/><span>sweetbox(container {</span><br/><span class="d-inline-block ml-3">descriptionImage: true</span><br/><span>})</span></p>
+          <h2 class="mt-5">¿Consultas o sugerencias?</h2>
+          <p class="text-dark lead mb-5">Contáctame en <a class="font-weight-bold" href="https://github.com/codeerick95" target="_blank">github </a><span>o escríbeme a </span><span class="font-weight-bold">dev.erick95@gmail.com</span></p>
+        </div>
+      </div>
+    </div><script src="https://kit.fontawesome.com/3bd84f9f96.js"></script>
+    <script src="js/sweetbox.min.js?t=1560301688323"></script>
+    <script src="js/app.min.js?t=1560301688323"></script>
+  </body>
+</html>

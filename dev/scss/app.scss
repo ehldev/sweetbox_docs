@@ -1,1 +1,29 @@
-@import 'config/main'
+@import "bootstrap/bootstrap";
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+	font-family: 'Inconsolata', monospace;
+}
+
+p {
+	font-weight: 300;
+}
+
+.btn {
+	box-shadow: none !important;
+}
+
+.welcome {
+	min-height: 50vh;
+}
+
+.lead {
+	font-size: 1em;
+}
+
+code, .code {
+	background-color: #f2f2f2;
+}
